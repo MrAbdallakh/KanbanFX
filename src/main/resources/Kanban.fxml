@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="970.0" style="-fx-background-color: #323232;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <MenuBar layoutY="2.0" style="-fx-background-color: #202020;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onActionSaveBoard" text="Save Board" />
+                  <MenuItem mnemonicParsing="false" onAction="#onActionSaveBoardAs" text="Save Board As" />
+                  <MenuItem mnemonicParsing="false" onAction="#onActionLoadBoard" text="Load Board" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onActionAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="labelBoardSaved" layoutX="50.0" layoutY="28.0" text="Board Saved..." textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="input" layoutY="49.0" prefHeight="100.0" prefWidth="970.0" style="-fx-control-inner-background: #505050; -fx-background-color: #000;" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="117.0" layoutY="199.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="3.0" text="To Do" wrappingWidth="87.0" AnchorPane.leftAnchor="117.0">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="429.0" layoutY="199.0" stroke="#aaaa00" strokeType="OUTSIDE" strokeWidth="3.0" text="In Work" wrappingWidth="112.0" AnchorPane.leftAnchor="429.0" AnchorPane.rightAnchor="429.0">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="773.0" layoutY="199.0" stroke="#00aa00" strokeType="OUTSIDE" strokeWidth="3.0" text="Done" wrappingWidth="74.0" AnchorPane.rightAnchor="123.0">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <ListView fx:id="toDo" layoutY="200.0" prefHeight="510.0" prefWidth="320.0" style="-fx-background-color: #202020; -fx-control-inner-background: #202020; -fx-border-color: #f00; -fx-font-family: Arial; -fx-font-size: 16;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <ListView fx:id="inWork" layoutX="760.0" layoutY="170.0" prefHeight="510.0" prefWidth="320.0" style="-fx-background-color: #202020; -fx-control-inner-background: #202020; -fx-border-color: #0f0; -fx-font-family: Arial; -fx-font-size: 16;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ListView fx:id="done" layoutX="325.0" layoutY="170.0" prefHeight="510.0" prefWidth="320.0" style="-fx-background-color: #202020; -fx-control-inner-background: #202020; -fx-border-color: #ffff00; -fx-font-family: Arial; -fx-font-size: 16;" AnchorPane.bottomAnchor="0.0" />
+   </children>
+</AnchorPane>
